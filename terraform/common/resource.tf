@@ -16,7 +16,7 @@ resource "random_password" "password" {
 # This creates a PostgresSQL server
 
 resource "azurerm_postgresql_server" "odw-np-db-server" {
-  name                = "${azurerm_resource_group.odw-backend-rg.name}postgresserver"
+  name                = "${azurerm_resource_group.odw-backend-rg.name}db-server"
   location            = azurerm_resource_group.odw-backend-rg.location
   resource_group_name = azurerm_resource_group.odw-backend-rg.name
 
