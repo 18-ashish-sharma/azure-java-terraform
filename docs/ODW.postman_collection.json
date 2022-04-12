@@ -1,0 +1,4401 @@
+{
+	"info": {
+		"_postman_id": "e111777b-6e60-4b02-a605-fab7b9186499",
+		"name": "ODW",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Lookups",
+			"item": [
+				{
+					"name": "ListHouseFactors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/lookup/house-factors",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"lookup",
+								"house-factors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListClassifications",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/lookup/classifications",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"lookup",
+								"classifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListEnvironmentFactors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/lookup/environment-factors",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"lookup",
+								"environment-factors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListPersonFactors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/lookup/person-factors",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"lookup",
+								"person-factors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListCategories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/lookup/categories",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"lookup",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListTypes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/lookup/types",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"lookup",
+								"types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListReports",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/lookup/reports",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"lookup",
+								"reports"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListNightlyTasks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/lookup/nightly-tasks",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"lookup",
+								"nightly-tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListNote-Categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/lookup/list-note-categories",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"lookup",
+								"list-note-categories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"test@test.com\",\r\n    \"password\":\"credential\",\r\n    \"firstName\":\"Test\",\r\n    \"lastName\":\"One\",\r\n    \"phone\":\"01 7010 1111\",\r\n    \"mobile\":\"0412 555 666\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/register",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateClient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"John\",\r\n    \"gender\": \"male\",\r\n    \"dob\": \"1966-01-01\",\r\n    \"email\": \"john@test.com\",\r\n    \"phone\": \"03 5461 1231\",\r\n    \"addrLine1\": \"No.56\",\r\n    \"addrLine2\": \"Bal road\",\r\n    \"city\": \"City\",\r\n    \"state\": \"State\",\r\n    \"postCode\": \"3456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/client/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateClient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jerrish\",\r\n    \"gender\": \"male\",\r\n    \"dob\": \"1958-02-01\",\r\n    \"email\": \"johnupdate@test.com\",\r\n    \"phone\": \"03 5461 1231\",\r\n    \"addrLine1\": \"No.56\",\r\n    \"deleted\": true,\r\n    \"addrLine2\": \"Bal road\",\r\n    \"city\": \"City\",\r\n    \"state\": \"Victoria\",\r\n    \"postCode\": \"3457\",\r\n    \"ndisNumber\": \"JES21121999\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/client/update/6",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client",
+								"update",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListClients",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pageNumber\": 0,\r\n    \"pageSize\": 10,\r\n    \"nameOrHouse\": \"sa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/client/list",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetClientsByHouseCode",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"houseCode\": \"5/76 New Road\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/house/fetch-clients",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"house",
+								"fetch-clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateHouse",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"houseCode\": \"103\",\n    \"phone\": \"03 1875 7658\",\n    \"addrLine1\": \"address 1\",\n    \"addrLine2\": \"address 2\",\n    \"city\": \"sydney\",\n    \"state\": \"victoria\",\n    \"postCode\": \"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/house/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"house",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateHouses",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"houseCode\":\"105\",\r\n    \"phone\":\"09 8765 4321\",\r\n    \"addrLine1\":\"new1\",\r\n    \"addrLine2\":\"new2\",\r\n    \"city\":\"new-city\",\r\n    \"state\":\"new-state\",\r\n    \"postCode\":\"0988\",\r\n    \"deleted\" : false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/house/update/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"house",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListHouses",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/house/list",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"house",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddClientToHouse",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"clientId\": 1,\n    \"houseCode\": \"100\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/house/add-client",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"house",
+								"add-client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveClientFromHouse",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"houseCode\" : \"100\",\r\n    \"clientId\" : \"5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/house/remove-client",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"house",
+								"remove-client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddRoleToUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\" : \"1\",\r\n    \"roleId\" : \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user/add-role",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"add-role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddUserToHouse",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"1\",\r\n    \"houseCode\":\"100\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/house/add-user",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"house",
+								"add-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveRoleFromUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":6,\r\n    \"roleId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user/remove-role",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"remove-role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveHouseFromUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\" :2,\r\n    \"houseCode\": \"100\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user/remove-house",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"remove-house"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/user/get/3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"get",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListUsers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/user/list",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"test@test.com\",\r\n    \"firstName\" : \"one1\",\r\n    \"lastName\" : \"one2\",\r\n    \"deleted\":\"false\",\r\n    \"phone\":\"61 4228 8284\",\r\n    \"mobile\":\"0812 114 098 \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user/update/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDailyNotesByHouseCodeAndCreatedUser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/dailynote/get/2/100",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"dailynote",
+								"get",
+								"2",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDailyNotesByDateAndHouseCode",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"start\": \"2021-07-06T02:00:00.000+00:00\",\n    \"end\": \"2021-08-13T02:00:00.000+00:00\",\n    \"pageSize\": 10,\n    \"pageNumber\": 0,\n    \"clientId\": 2,\n    \"houseCode\": \"100\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/dailynote/search",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"dailynote",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateCaseNote",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\":1,\r\n    \"categoryId\" :1,\r\n    \"noteDate\":\"2021-11-18\",\r\n    \"content\":\"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,\",\r\n    \"subject\":\"subject 5\",\r\n    \"lastUploadedBy\":\"joe\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/case-note/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"case-note",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCaseNote",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/case-note/get/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"case-note",
+								"get",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListCaseNotes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"start\":\"2021-11-16\",\r\n  \"end\":\"2021-11-17\",\r\n  \"pageNumber\":0,\r\n  \"pageSize\":10,\r\n  \"clientId\":1,\r\n  \"category\": \"Incident Result With Injury\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/case-note/list",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"case-note",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCaseNote",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"subject\":\"subject 00\",\r\n    \"startTime\":\"2021-11-20 15:00:00\",\r\n    \"endTime\":\"2021-11-21 12:00:00\",\r\n    \"content\":\"Money, also sometimes called currency, can be defined as anything that people use to buy goods and services.\",\r\n    \"deleted\":false,\r\n    \"noteDate\" : \"2021-11-12\",\r\n    \"lastUploadedBy\":\"ram\",\r\n    \"categoryId\" :12\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/case-note/update/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"case-note",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UploadEmergencyFile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "houseCode",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "fileType",
+									"value": "PLAN",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/upload",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UploadHouseImage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "houseCode",
+									"value": "103",
+									"type": "text"
+								},
+								{
+									"key": "lastUploadedBy",
+									"value": "sam",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/upload-image",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"upload-image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateClientContact",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"clientId\":1,\r\n\"relation\":\"father\",\r\n\"designation\":\"entrepreneur\",\r\n\"email\":\"jade@gmail.com\",\r\n\"firstName\":\"jaden\",\r\n\"lastName\":\"joseph\",\r\n\"address1\":\"yamba\",\r\n\"address2\":\"apollo bay\",\r\n\"phone1\":\"09 8765 4321\",\r\n\"phone2\":\"12 3456 7890\",\r\n\"city\":\"perth\",\r\n\"state\":\"victoria\",\r\n\"postCode\":\"4567\",\r\n\"notes\":\"notes1\",\r\n\"lastUpdatedBy\":\"rosy\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/client/create-contact",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client",
+								"create-contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateHouseContact",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"houseCode\" : [\"100\",\"103\"],\r\n    \"caption\": \"Room1\",\r\n   \"firstName\" :\"Sam\",\r\n   \"lastName\" :\"Mathew\",\r\n   \"email\": \"sammathew@gmail.com\",\r\n   \"phone1\": \"03 5461 1231\",\r\n   \"phone2\": \"02 3487 4598\",\r\n   \"address1\" : \"Abc road\",\r\n   \"address2\": \"xyz street\",\r\n   \"city\" : \"Greenway\",\r\n   \"state\" : \"Sydney\",\r\n   \"zip\": \"Greenway\",\r\n   \"notes\": \"checked\",\r\n   \"lastUpdatedBy\": \"Sam\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/house/create-contact",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"house",
+								"create-contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateClientContact",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"firstName\":\"ram\",\r\n\"lastName\":\"mohan\",\r\n\"email\":\"ram@gmail.com\",\r\n\"relation\":\"son\",\r\n\"designation\":\"student\",\r\n\"phone1\":\"11 2233 4455\",\r\n\"phone2\":\"9988776655\",\r\n\"address1\":\"lane1\",\r\n\"address2\":\"lane2\",\r\n\"city\":\"city1\",\r\n\"state\":\"city2\",\r\n\"postCode\":\"5467\",\r\n\"notes\":\"note1\",\r\n\"status\":\"INACTIVE\",\r\n\"lastUpdatedBy\":\"tina\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/client/update/contact/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client",
+								"update",
+								"contact",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateHouseContact",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"caption\": \"Room1\",\r\n   \"status\":\"INACTIVE\",\r\n   \"houseCode\" : [\"100\",\"103\"],\r\n   \"firstName\" :\"mary\",\r\n   \"lastName\" :\"kurian\",\r\n   \"email\": \"marykurian@gmail.com\",\r\n   \"phone1\": \"03 5461 1231\",\r\n   \"phone2\": \"02 3487 4598\",\r\n   \"address1\" : \"Abc road\",\r\n   \"address2\": \"xyz street\",\r\n   \"city\" : \"Greenway\",\r\n   \"state\" : \"Sydney\",\r\n   \"zip\": \"Greenway\",\r\n   \"notes\": \"checked\",\r\n   \"lastUpdatedBy\": \"Sam\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/house/update/contact/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"house",
+								"update",
+								"contact",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserByHouseCode",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"houseCode\": \"103\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user/list-by-house",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"list-by-house"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateMiscellaneousNote",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"noteDate\":\"2021-12-03\",\r\n    \"categoryId\":3,\r\n    \"subject\":\"subject3\",\r\n    \"content\":\"Hello there. How are you\",\r\n    \"house\":\"1\",\r\n    \"client\":\"joe\",\r\n    \"user\":\"john\",\r\n    \"lastUploadedBy\":\"sam\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/miscellaneous-note/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"miscellaneous-note",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateMiscellaneousNote",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subject\":\"subject3\",\r\n    \"content\":\"Hello there.\",\r\n    \"house\":\"1\",\r\n    \"client\":\"joe\",\r\n    \"user\":\"john\",\r\n    \"lastUploadedBy\":\"sam\",\r\n    \"deleted\":false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/miscellaneous-note/update/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"miscellaneous-note",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListMiscellaneousNotes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"start\":\"2021-12-03\",\r\n  \"end\":\"2021-12-04\",\r\n  \"pageNumber\":0,\r\n  \"pageSize\":10,\r\n  \"category\":\"New Client\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/miscellaneous-note/list",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"miscellaneous-note",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListUsersByPage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"pageNumber\":0,\r\n  \"pageSize\":10,\r\n  \"nameOrEmail\" :\"be\",\r\n  \"houseCode\" :\"189\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user/list-page",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"list-page"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createserviceprovider",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\":1,\r\n    \"name\":\"sam\",\r\n    \"email\":\"eee@gmail.com\",\r\n    \"phone\":\"333333333333\",\r\n    \"service\": \"transports\",\r\n    \"lastUpdatedBy\": \"james\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/service-provider/service-provider/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"service-provider",
+								"service-provider",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getserviceprovider",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/service-provider/list/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"service-provider",
+								"list",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateServiceProvider",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"roy\",\r\n    \"service\": \"Telephone\",\r\n    \"email\":\"s12344@gmail.com\",\r\n    \"phone\":\"333333333333\",\r\n    \"deleted\": false,\r\n    \"lastUpdatedBy\": \"jim\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/service-provider/update/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"service-provider",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateClientNDISPlan",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\": 5,\r\n    \"startDate\": \"2021-01-01\",\r\n    \"endDate\": \"2022-03-31\",\r\n    \"fundingType\": \"funding5\",\r\n    \"level\": \"level2\",\r\n    \"supportDocument\": \"docs5.jpg\",\r\n    \"otherDocument\": \"other5\",\r\n    \"lastUploadedBy\": \"Sam\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/client-ndis-plan/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client-ndis-plan",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetClientAllowances",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/client-allowances/list/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client-allowances",
+								"list",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateClientAllowances",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"cappedKMs\":\"120\",\r\n \"concessionCard\":\"A12\",\r\n \"kms\":\"100\",\r\n \"grocerySpend\":\"5000\",\r\n \"budgetlyCardNo\":\"10\",\r\n \"deleted\": false,\r\n \"lastUploadedBy\": \"niya\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/client-allowances/update/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client-allowances",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListClientNDISPlan",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/client-ndis-plan/list/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client-ndis-plan",
+								"list",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateClientNDISPlan",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"startDate\": \"2021-09-01\",\n    \"endDate\": \"2023-03-31\",\n    \"fundingType\": \"funding6\",\n    \"level\": \"level3\",\n    \"deleted\": false,\n    \"lastUploadedBy\": \"Samer\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/client-ndis-plan/update/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client-ndis-plan",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateClientAdditionalField",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n     \"identity\": \"passport\",\n    \"culture\": \"american\",\n    \"language\": \"english\",\n    \"diagnosis\": \"heart problem\",\n    \"mobility\": \"yes\",\n    \"communication\": \"excellent\",\n    \"medicationSupport\": \"required\",\n    \"transportation\": \"veichle\",\n    \"justiceOrders\": \"NA\",\n    \"supportRatio\": \"NA\",\n    \"shiftTimes\": \"Assigned\",\n    \"supportWorkerSpecs\": \"NA\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/client/update-additional/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client",
+								"update-additional",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UploadClientPlanSupportDocument",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/MithunEdstem/Desktop/file-sample_100kB.docx"
+								},
+								{
+									"key": "clientName",
+									"value": "John",
+									"contentType": "application/json",
+									"type": "text"
+								},
+								{
+									"key": "clientNDISPlanId",
+									"value": "2",
+									"contentType": "application/json",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/client-ndis-plan/upload-support/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client-ndis-plan",
+								"upload-support",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UploadOtherDocument",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/sheejarasheed/OneDrive/SE.JPG"
+								},
+								{
+									"key": "clientName",
+									"value": "John",
+									"type": "text"
+								},
+								{
+									"key": "clientNDISPlanId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/client-ndis-plan/upload-other/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client-ndis-plan",
+								"upload-other",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UploadClientPhoto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "Mrsj7It4z/clientphoto.jpg"
+								},
+								{
+									"key": "clientId",
+									"value": "1",
+									"contentType": "application/json",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "John",
+									"contentType": "application/json",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/client/upload-photo/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client",
+								"upload-photo",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Staff",
+			"item": [
+				{
+					"name": "CreateDailyNote",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"note\": \"A sample note\",\n    \"houseCode\": \"100\",\n    \"clientId\": 2,\n    \"startTime\":\"2021-11-25 16:00:00\",\n    \"endTime\":\"2021-11-25 16:00:00\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/dailynote/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"dailynote",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetHouseByCode",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"houseCode\": \"5/76 New Road\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/house/get",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"house",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateDailyNote",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"2\",\r\n    \"note\" :\"yess\",\r\n    \"startTime\":\"2021-11-25 16:00:00\",\r\n    \"endTime\":\"2021-11-25 16:00:00\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/dailynote/update",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"dailynote",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteNoteById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/dailynote/delete/5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"dailynote",
+								"delete",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UploadDocument",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"contentType": "",
+									"type": "file",
+									"src": "y-ceppy0M/img1.jpg"
+								},
+								{
+									"key": "clientId",
+									"value": "1",
+									"contentType": "application/json",
+									"type": "text"
+								},
+								{
+									"key": "folderId",
+									"value": "1",
+									"contentType": "application/json",
+									"type": "text"
+								},
+								{
+									"key": "lastUploadedBy",
+									"value": "Tom",
+									"contentType": "application/json",
+									"type": "text"
+								},
+								{
+									"key": "docName",
+									"value": "medical",
+									"contentType": "application/json",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/upload-document",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"upload-document"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetEmergencyPlanUrl",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"houseCode\":\"105\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/url/get",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"url",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetClientContactById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/client/get/contact/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client",
+								"get",
+								"contact",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetHouseContact",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/house/get/contact/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"house",
+								"get",
+								"contact",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListHouseContacts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"houseCode\" :\"103\",\r\n    \"pageSize\": 10,\r\n    \"pageNumber\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/house/list/contact",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"house",
+								"list",
+								"contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListClientContacts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/client/list/contact/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client",
+								"list",
+								"contact",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetImageUrl",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"houseCode\":\"105\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/get-image",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"get-image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateHandoverSummary",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"houseCode\":\"100\",\r\n\"handoverDate\":\"2021-11-25\",\r\n\"handoverTime\":\"2021-11-25 16:00:00\",\r\n \"handoverShift\":\"MORNING\",\r\n\"handoverToId\":2,\r\n \"behaviourSummary\":\"Behaviour okay\",\r\n\"sleepSummary\":\"slept till 7.30 am\",\r\n\"foodSummary\":\"had a healthy brunch\",\r\n\"toiletingSummary\":\"no problem\",\r\n\"activitiesSummary\":\"had a warm up session\",\r\n\"communications\":\"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,\",\r\n\"topPriorities\":\"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia volupta\",\r\n\"comments\":\"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by thei\", \r\n\"peopleAttended\":\"a few\",\r\n\"placesVisited\":\"chapel\",\r\n\"thingsLater\":\"meidicine\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/handover/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"handover",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListHandoverSummary",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n\"houseCode\":\"198\",\n\"start\":\"2021-11-25\",\n\"end\":\"2021-11-26\",\n\"pageNumber\":0,\n\"pageSize\":10\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/handover/list",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"handover",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateHandOverSummary",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"handoverDate\":\"2021-12-01\",\r\n  \"handoverTime\":\"2021-12-01 20:00:00\",\r\n  \"handoverShift\":\"MORNING\",\r\n  \"handoverToId\":2,\r\n  \"deleted\":true,\r\n  \"behaviourSummary\":\"Behaviour okay\",\r\n  \"sleepSummary\":\"slept till 7.30 am\",\r\n  \"foodSummary\":\"had a healthy lunch\",\r\n  \"toiletingSummary\":\"no problem\",\r\n  \"activitiesSummary\":\"had a warm up session\",\r\n  \"communications\":\"Lorem ipsum dolor sit amet, consectetuer adipiscing elit.,\",\r\n  \"topPriorities\":\"Sed ut perspiciatis unde omnis iste natus error\",\r\n  \"comments\":\"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.\", \r\n  \"peopleAttended\":\"a few\",\r\n  \"placesVisited\":\"chapel\",\r\n  \"thingsLater\":\"medicine\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/handover/update/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"handover",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Incident",
+			"item": [
+				{
+					"name": "CreateIncidentForClient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"houseId\" :1,\r\n    \"clientId\" :1,\r\n    \"categoryId\": 4,\r\n    \"classificationId\": 10,\r\n    \"typeId\": 20,\r\n    \"status\": \"RAISED\",\r\n    \"raisedFor\":\"CLIENT\",\r\n    \"description\": \"description\",\r\n    \"dateOccurred\": \"1980-09-07 14:33:21\",\r\n    \"location\": \"County Name\",\r\n    \"exactLocation\": \"In living room\",\r\n    \"injuredGivenName\": \"Jeff\",\r\n    \"injuredFamilyName\": \"Gigs\",\r\n    \"witnessName\":\"Dua\",\r\n    \"witnessDesignation\":\"Doctor\",\r\n    \"followUpResponsibility\":\"take care of patients\",\r\n    \"policeReport\":\"No\",\r\n    \"beforeIncident\":\"Something happened\",\r\n    \"immediateAction\":\"take care of problems\",\r\n    \"reportableToNDIS\":\"Yes\",\r\n    \"reportableToWorksafe\":\"Yes\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/incident/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"incident",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateIncidentForStaff",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"categoryId\": 4,\n    \"classificationId\": 10,\n    \"typeId\": 20,\n    \"status\": \"RAISED\",\n    \"raisedFor\":\"STAFF\",\n    \"description\": \"description\",\n    \"dateOccurred\": \"1980-09-07 14:33:21\",\n    \"location\": \"County Name\",\n    \"exactLocation\": \"In living room\",\n    \"injuredGivenName\": \"Jeff\",\n    \"injuredFamilyName\": \"Gigs\",\n     \"witnessName\":\"Dua\",\n    \"witnessDesignation\":\"Doctor\",\n    \"followUpResponsibility\":\"take care of patients \",\n    \"policeReport\":\"Yes\",\n    \"policeName\":\"FBI\",\n    \"policeStation\":\"Washington\" ,\n    \"policeNumber\":\"666\",\n    \"beforeIncident\":\"Something happened\",\n    \"immediateAction\":\"take care of problems\",\n    \"reportableToNDIS\":\"Yes\",\n    \"reportableToWorksafe\":\"Yes\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/incident/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"incident",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetIncident",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/incident/get/10",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"incident",
+								"get",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListIncidents",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"pageSize\": 10,\n    \"pageNumber\": 0,\n    \"houseCode\": \"105\",\n    \"clientName\": \"John\",\n    \"reportedBy\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/incident/list",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"incident",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateReview",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"incidentId\": 5,\n    \"factorHouseDesign\": true,\n    \"factorHouseEquipment\": true,\n    \"factorHouseFumes\": true,\n    \"factorHouseGuards\": true,\n    \"factorHouseOther\": true,\n    \"factorHouseUnsuitable\": true,\n    \"factorHouseDescription\": \"Room 12\",\n    \"factorHouseWhatHappened\": \"Nothing\",\n    \"factorPersonName\": \"Tom\",\n    \"factorPersonAlcohol\": true,\n    \"factorPersonComplacency\": true,\n    \"factorPersonLineOfFire\": true,\n    \"factorPersonFrustration\": true,\n    \"factorPersonLackTraining\": true,\n    \"factorPersonLossBalance\": true,\n    \"factorPersonManualHandling\": true,\n    \"factorPersonMedicalCondition\": true,\n    \"factorPersonNoPPE\": true,\n    \"factorPersonOther\": true,\n    \"factorPersonRushing\": true,\n    \"factorPersonThreatening\": true,\n    \"factorPersonFatigue\": true,\n    \"factorPersonUnsafePractice\": true,\n    \"factorPersonWorkingAlone\": true,\n    \"factorPersonDescription\": \"Normal\",\n    \"factorPersonWhatHappened\": \"Injured\",\n    \"factorEnvAnimals\": true,\n    \"factorEnvConfine\": true,\n    \"factorEnvNight\": true,\n    \"factorEnvOdours\": true,\n    \"factorEnvOther\": true,\n    \"factorEnvObstructions\": true,\n    \"factorEnvRaining\": true,\n    \"factorEnvSunGlare\": true,\n    \"factorEnvSurface\": true,\n    \"factorEnvTemperature\": true,\n    \"factorEnvVegetation\": true,\n    \"factorEnvHeight\": true,\n    \"factorEnvDescription\": \"Description\",\n    \"factorEnvWhatHappened\": \"Injured\",\n    \"factorWorkDescription\": \"work\",\n    \"factorWorkWhatHappened\": \"Injured\",\n    \"riskRating\": 1,\n    \"consequences\": \"consequences\",\n    \"likelihood\": \"risk\",\n    \"correctiveAction\": \"correctiveAction\",\n    \"dueDate\": \"1980-09-07\",\n    \"actionsToImplement\": \"Immediate\",\n    \"allocatedTo\": \"allocatedTo\",\n    \"reviewedBy\":\"Renny\",\n    \"supportPlanUpdate\" : \"Yes\",\n    \"codeBreach\" : \"Yes\",\n    \"furtherSupport\": \"Yes\",\n    \"howPrevented\" : \"howPrevented\",\n    \"followUp\": \"followUp\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/incident-review/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"incident-review",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetIncidentReview",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/incident-review/get/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"incident-review",
+								"get",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EscalateIncident",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/incident/escalate/1/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"incident",
+								"escalate",
+								"1",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CloseIncident",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/incident/close/1/Jack",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"incident",
+								"close",
+								"1",
+								"Jack"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateIncidentForStaff",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \"id\":2,\r\n     \"categoryId\": 4,\r\n    \"classificationId\": 10,\r\n    \"typeId\": 20,\r\n     \"status\":\"RAISED\",\r\n     \"raisedFor\":\"STAFF\",\r\n     \"description\":\"desc\",\r\n     \"dateOccurred\" : \"1999-08-12 12:09:21\",\r\n     \"location\":\"Sydney\",\r\n     \"exactLocation\":\"Australia\",\r\n     \"injuredGivenName\":\"harry\",\r\n     \"injuredFamilyName\":\"Jacob\",\r\n     \"witnessName\":\"liya\",\r\n    \"witnessDesignation\":\"Mechanic\",\r\n    \"followUpResponsibility\":\"take care of vehicles  \",\r\n    \"policeReport\":\"Yes\",\r\n    \"policeName\":\"CBI\",\r\n    \"policeStation\":\"Washington\" ,\r\n    \"policeNumber\":\"666\",\r\n    \"beforeIncident\":\"Something happened\",\r\n    \"immediateAction\":\"take care of problems\",\r\n    \"reportableToNDIS\":\"No\",\r\n    \"reportableToWorksafe\":\"No\"\r\n}\r\n    \r\n\r\n    ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/incident/update/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"incident",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateIncidentForClient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \"id\":2,\r\n     \"categoryId\": 4,\r\n    \"classificationId\": 10,\r\n    \"typeId\": 20,\r\n     \"houseId\":1,\r\n     \"clientId\":1,\r\n     \"status\":\"RAISED\",\r\n     \"raisedFor\":\"CLIENT\",\r\n     \"description\":\"desc\",\r\n     \"dateOccurred\" : \"1999-08-12 12:09:21\",\r\n     \"location\":\"Sydney\",\r\n     \"exactLocation\":\"Australia\",\r\n     \"injuredGivenName\":\"harry\",\r\n     \"injuredFamilyName\":\"Jacob\",\r\n      \"witnessName\":\"Aliya\",\r\n    \"witnessDesignation\":\"Salesman\",\r\n    \"followUpResponsibility\":\"take care of sales  \",\r\n    \"policeReport\":\"Yes\",\r\n    \"policeName\":\"CBI\",\r\n    \"policeStation\":\"India\" ,\r\n    \"policeNumber\":\"777\",\r\n    \"beforeIncident\":\"Something happened\",\r\n    \"immediateAction\":\"take care of problems\",\r\n    \"reportableToNDIS\":\"Yes\",\r\n    \"reportableToWorksafe\":\"Yes\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/incident/update/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"incident",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditReview",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":5,\r\n    \"factorHouseDesign\": false,\r\n    \"factorHouseEquipment\": false,\r\n    \"factorHouseFumes\": false,\r\n    \"factorHouseGuards\": false,\r\n    \"factorHouseOther\": true,\r\n    \"factorHouseUnsuitable\": false,\r\n    \"factorHouseDescription\": \"Room 190\",\r\n    \"factorHouseWhatHappened\": \"Something\",\r\n    \"factorPersonName\": \"Ram\",\r\n    \"factorPersonAlcohol\": false,\r\n    \"factorPersonComplacency\": false,\r\n    \"factorPersonLineOfFire\": false,\r\n    \"factorPersonFrustration\": false,\r\n    \"factorPersonLackTraining\": false,\r\n    \"factorPersonLossBalance\": false,\r\n    \"factorPersonManualHandling\": false,\r\n    \"factorPersonMedicalCondition\": false,\r\n    \"factorPersonNoPPE\": false,\r\n    \"factorPersonOther\": false,\r\n    \"factorPersonRushing\": false,\r\n    \"factorPersonThreatening\": false,\r\n    \"factorPersonFatigue\": false,\r\n    \"factorPersonUnsafePractice\": false,\r\n    \"factorPersonWorkingAlone\": false,\r\n    \"factorPersonDescription\": \"not Normal\",\r\n    \"factorPersonWhatHappened\": \"not Injured\",\r\n    \"factorEnvAnimals\": false,\r\n    \"factorEnvConfine\": false,\r\n    \"factorEnvNight\": false,\r\n    \"factorEnvOdours\": false,\r\n    \"factorEnvOther\": false,\r\n    \"factorEnvObstructions\": false,\r\n    \"factorEnvRaining\": false,\r\n    \"factorEnvSunGlare\": false,\r\n    \"factorEnvSurface\": false,\r\n    \"factorEnvTemperature\": false,\r\n    \"factorEnvVegetation\": false,\r\n    \"factorEnvHeight\": false,\r\n    \"factorEnvDescription\": \"no Description\",\r\n    \"factorEnvWhatHappened\": \"not Injured\",\r\n    \"factorWorkDescription\": \"no work\",\r\n    \"factorWorkWhatHappened\": \"not Injured\",\r\n    \"riskRating\": 2,\r\n    \"consequences\": \"no consequences\",\r\n    \"likelihood\": \" no riskie\",\r\n    \"correctiveAction\": \"no correctiveAction\",\r\n    \"dueDate\": \"2000-09-12\",\r\n    \"actionsToImplement\": \"not Immediate\",\r\n    \"allocatedTo\": \"not allocatedTo\",\r\n    \"reviewedBy\":\"Jamie\",\r\n    \"supportPlanUpdate\" : \"Yes\",\r\n    \"codeBreach\" : \"Yes\",\r\n    \"furtherSupport\": \"Yes\",\r\n    \"howPrevented\" : \"howPrevented\",\r\n    \"followUp\": \"followUp\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/incident-review/update/5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"incident-review",
+								"update",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListIncidentsForGraph",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"start\": \"2021-04-10T02:00:00.000+00:00\",\r\n    \"end\": \"2022-03-09T02:00:00.000+00:00\",\r\n    \"raisedFor\": \"STAFF\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/incident/listForGraph",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"incident",
+								"listForGraph"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DailyChecklist",
+			"item": [
+				{
+					"name": "ListDailyReports",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/client/reports",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client",
+								"reports"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateNightReport",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"clientId\" : 1,\r\n    \"cleanToilet\": true,\r\n    \"cleanToiletBy\": \"james\",\r\n    \"cleanBathroomStaff\": true,\r\n    \"cleanBathroomStaffBy\": \"Anjana\",\r\n    \"cleanBathroomClient\": true,\r\n    \"cleanBathroomClientBy\": \"tom\",\r\n    \"tidyFurniture\": true,\r\n    \"tidyFurnitureBy\": \"Joe\",\r\n    \"vacuumFloors\": true,\r\n    \"vacuumFloorsBy\": \"jim\",\r\n    \"mopFloors\": true,\r\n     \"mopFloorsBy\":\"lara\",\r\n    \"washingCycle\": true,\r\n    \"washingCycleBy\": \"Seba\",\r\n    \"dryingCycle\": true,\r\n   \"dryingCycleBy\": \"sam\",\r\n    \"foldClothes\": true,\r\n    \"foldClothesBy\": \"jim\",\r\n    \"putAwayDishes\": true,\r\n    \"putAwayDishesBy\": \"John\",\r\n    \"tidyStaffRoom\": true,\r\n    \"tidyStaffRoomBy\": \"jose\",\r\n    \"chargeElectronics\": true,\r\n    \"chargeElectronicsBy\": \"mathew\",\r\n    \"completedDailyReports\": true,\r\n   \"completedDailyReportsBy\": \"rachel\",\r\n    \"checkMedicationChart\": true,\r\n    \"checkMedicationChartBy\": \"merin\",\r\n    \"fillIncidentReport\": true,\r\n    \"fillIncidentReportBy\": \"gimi\",\r\n    \"checkFridge\": true,\r\n    \"checkFridgeBy\": \"Hazel\",\r\n    \"emptyDustbins\": true,\r\n    \"emptyDustbinsBy\": \"alan\",\r\n    \"takeOutDustbins\": true,\r\n    \"takeOutDustbinsBy\": \"Ron\",\r\n    \"vacuumVehicle\": true,\r\n    \"vacuumVehicleBy\": \"jane\",\r\n    \"checklistVehicle\": true,\r\n    \"checklistVehicleBy\": \"rahael\",\r\n    \"childLockVehicle\": true,       \r\n    \"childLockVehicleBy\": \"Renu\",\r\n    \"reportDate\": \"2021-12-03\"  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/night-report/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"night-report",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateFoodDiaryNote",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"clientId\":1,\r\n    \"mealType\":\"BREAKFAST\",\r\n    \"mealTime\":\"2021-10-13 08:00:00\",\r\n    \"mealFood\":\"bread\",\r\n    \"mealDrink\":\"juice\",\r\n    \"mealComments\":\"good\",\r\n    \"reportDate\": \"2021-12-03\",\r\n    \"mealUpdatedBy\":\"tom\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/food-diary/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"food-diary",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateNightReport",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"id\" : 2,\r\n    \"cleanToilet\": false,\r\n    \"cleanToiletBy\": \"james\",\r\n    \"cleanBathroomStaff\": false,\r\n    \"cleanBathroomStaffBy\": \"Anjana\",\r\n    \"cleanBathroomClient\": false,\r\n    \"cleanBathroomClientBy\": \"tom\",\r\n    \"tidyFurniture\": false,\r\n    \"tidyFurnitureBy\": \"Joe\",\r\n    \"vacuumFloors\": false,\r\n    \"vacuumFloorsBy\": \"jim\",\r\n    \"mopFloors\": false,\r\n     \"mopFloorsBy\":\"lara\",\r\n    \"washingCycle\": false,\r\n    \"washingCycleBy\": \"Seba\",\r\n    \"dryingCycle\": false,\r\n   \"dryingCycleBy\": \"sam\",\r\n    \"foldClothes\": false,\r\n    \"foldClothesBy\": \"jim\",\r\n    \"putAwayDishes\": false,\r\n    \"putAwayDishesBy\": \"John\",\r\n    \"tidyStaffRoom\": false,\r\n    \"tidyStaffRoomBy\": \"jose\",\r\n    \"chargeElectronics\": false,\r\n    \"chargeElectronicsBy\": \"mathew\",\r\n    \"completedDailyReports\": false,\r\n   \"completedDailyReportsBy\": \"rachel\",\r\n    \"checkMedicationChart\": false,\r\n    \"checkMedicationChartBy\": \"merin\",\r\n    \"fillIncidentReport\": false,\r\n    \"fillIncidentReportBy\": \"gimi\",\r\n    \"checkFridge\": false,\r\n    \"checkFridgeBy\": \"Hazel\",\r\n    \"emptyDustbins\": false,\r\n    \"emptyDustbinsBy\": \"alan\",\r\n    \"takeOutDustbins\": false,\r\n    \"takeOutDustbinsBy\": \"Ron\",\r\n    \"vacuumVehicle\": false,\r\n    \"vacuumVehicleBy\": \"jane\",\r\n    \"checklistVehicle\": false,\r\n    \"checklistVehicleBy\": \"rahael\",\r\n    \"childLockVehicle\": false,       \r\n  \"childLockVehicleBy\": \"Renu\",\r\n  \"currentLastUpdatedAt\":\"2021-10-19T10:21:15.551Z\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/night-report/update/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"night-report",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetNightReport",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/night-report/get/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"night-report",
+								"get",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ToggleReportForClient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\" : 1,\r\n    \"lookupId\" : 75,\r\n    \"toggle\" : true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/clientReport/toggle-report",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"clientReport",
+								"toggle-report"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetReport",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/clientReport/get/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"clientReport",
+								"get",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateSleepReport",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\" : 2,\r\n    \"firstSlot\" : \"\",\r\n    \"firstUpdatedBy\" : \"\",\r\n    \"secondSlot\" : \"\",\r\n    \"secondUpdatedBy\" : \"\",\r\n    \"thirdSlot\" : \"op\",\r\n    \"thirdUpdatedBy\" : \"joe\",\r\n    \"fourthSlot\" : \"\",\r\n    \"fourthUpdatedBy\" :\"\",\r\n    \"fifthSlot\" :\"hu\",\r\n    \"fifthUpdatedBy\" :\"mary\",\r\n    \"sixthSlot\" : \"\",\r\n    \"sixthUpdatedBy\" : \"\",\r\n    \"seventhSlot\" :\"yer\",\r\n    \"seventhUpdatedBy\" :\"rob\",\r\n    \"eighthSlot\" :\"er\",\r\n    \"eighthUpdatedBy\" : \"jack\",\r\n   \"reportDate\" : \"2021-10-14\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/sleep-notes/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"sleep-notes",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetFoodDiaryNote",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/food-diary/get/1/LUNCH",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"food-diary",
+								"get",
+								"1",
+								"LUNCH"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateFoodDiaryNote",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"mealType\":\"BREAKFAST\",\r\n    \"mealTime\":\"2021-10-13 08:30:00\",\r\n    \"mealFood\":\"fruits\",\r\n    \"mealDrink\":\"juice\",\r\n    \"mealComments\":\"healthy\",\r\n    \"mealUpdatedBy\":\"peter\",\r\n    \"currentLastUpdatedAt\":\"2021-10-18T04:12:10.872Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/food-diary/update/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"food-diary",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSleepTrackerNote",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/sleep-notes/get/2/2021-10-17",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"sleep-notes",
+								"get",
+								"2",
+								"2021-10-17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateSleepTracker",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"firstSlot\" : \"\",\r\n    \"firstUpdatedBy\" : \"\",\r\n    \"secondSlot\" : \"\",\r\n    \"secondUpdatedBy\" : \"\",\r\n    \"thirdSlot\" : \"gh\",\r\n    \"thirdUpdatedBy\" : \"joe\",\r\n    \"fourthSlot\" : \"\",\r\n    \"fourthUpdatedBy\" :\"\",\r\n    \"fifthSlot\" :\"ef\",\r\n    \"fifthUpdatedBy\" :\"mary\",\r\n    \"sixthSlot\" : \"\",\r\n    \"sixthUpdatedBy\" : \"\",\r\n    \"seventhSlot\" :\"cd\",\r\n    \"seventhUpdatedBy\" :\"rob\",\r\n    \"eighthSlot\" :\"ab\",\r\n    \"eighthUpdatedBy\" : \"jack\",\r\n   \"currentLastUpdatedAt\":\"2021-10-18T13:02:15.100Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/sleep-notes/update/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"sleep-notes",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetParticularFoodDiaryNote",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\":1,\r\n    \"reportDate\":\"2021-10-18\",\r\n    \"mealType\":\"BREAKFAST\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/food-diary/get-particular",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"food-diary",
+								"get-particular"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetParticularNightReport",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\":1,\r\n    \"reportDate\":\"2021-10-19\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/night-report/get-particular",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"night-report",
+								"get-particular"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateBowelNotes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n     \"startDate\":\"2021-09-09\",\n     \"recordTime\":\"2021-09-12 10:00:00\",\n     \"clientId\":2,\n     \"size\": \"Large\",\n     \"type1\":false,\n      \"type2\":true,\n       \"type3\":false,\n        \"type4\":false,\n         \"type5\":false,\n          \"type6\":false,\n      \"type7\":true,\n      \"lastUploadedBy\":\"jeremyas\"\n\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/bowel-note/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"bowel-note",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListBowelNotes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"start\":\"2021-12-09\",\r\n  \"end\":\"2021-12-12\",\r\n  \"pageNumber\":0,\r\n  \"pageSize\":10,\r\n  \"clientId\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/bowel-note/list",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"bowel-note",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateBowelNote",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"recordTime\":\"2021-09-12 10:00:00\",\r\n     \"size\": \"Large\",\r\n     \"type1\":false,\r\n      \"type2\":false,\r\n       \"type3\":false,\r\n        \"type4\":false,\r\n         \"type5\":false,\r\n          \"type6\":false,\r\n      \"type7\":true,\r\n      \"deleted\":false,\r\n      \"lastUploadedBy\":\"jerry\",\r\n      \"currentLastUpdatedAt\":\"2021-12-14T01:51:43.122Z\"\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/bowel-note/update/5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"bowel-note",
+								"update",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SupportingDocuments",
+			"item": [
+				{
+					"name": "CreateFolder",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"clientId\": 1,\r\n   \"folderName\": \"medical record\",\r\n   \"lastUpdatedBy\": \"Helen\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/client/create-folder",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client",
+								"create-folder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetFolderById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/client/get/folder/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client",
+								"get",
+								"folder",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListFoldersByClientId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/client/list/folders/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client",
+								"list",
+								"folders",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateFolder",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"folderName\":\"folder 2\",\r\n    \"status\":\"INACTIVE\",\r\n    \"lastUpdatedBy\":\"ram\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/client/update-folder",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client",
+								"update-folder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListDocuments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/list-documents/1/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"list-documents",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteDocumentById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/delete-document/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"delete-document",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notice",
+			"item": [
+				{
+					"name": "CreateNotice",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"startDate\": \"2021-09-16T02:00:00.000+00:00\",\r\n\"endDate\": \"2021-09-17T02:00:00.000+00:00\",\r\n    \"notice\":\"notice 1\",\r\n    \"houseCode\":[\"100\",\"103\"]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/notice/create",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"notice",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateNotice",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"startDate\": \"2021-09-16T02:00:00.000+00:00\",\r\n\"endDate\": \"2021-09-17T02:00:00.000+00:00\",\r\n    \"notice\":\"notice 1 updated\",\r\n    \"houseCode\":[\"100\",\"103\"]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/notice/update/1   ",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"notice",
+								"update",
+								"1   "
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListNotice",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"houseCode\" : \"103\",\r\n    \"status\":\"ACTIVE\",\r\n    \"pageSize\": 10,\r\n    \"pageNumber\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/notice/list",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"notice",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetNotice",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/notice/get/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"notice",
+								"get",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"token\", jsonData.jwt);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"jerrish@edstem.com\",\n    \"password\": \"simple\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChangePassword",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"token\", jsonData.jwt);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"oldPassword\": \"simple\",\n    \"newPassword\": \"simple2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/change-password",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"change-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListRoles",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/roles/list",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"roles",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ForgotPassword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"harsha.johnson@edstem.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user/forgot-password",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"forgot-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ResetPassword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"newPassword\" : \"credential\",\r\n    \"confirmPassword\" : \"credential\",\r\n    \"token\" : \"4c5df74e-247d-4692-b653-07262034b59e\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user/reset-password",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"reset-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetClientById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/client/get/4",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"client",
+						"get",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateClientById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"medicareNo\":1,\n    \"expiryDate\":\"2021-09-12\",\n    \"healthFund\":false,\n    \"centerLinkNo\":\"Mary3\",\n    \"individualReferenceNumber\":\"CODY21\",\n    \"medicareCardName\":\"Jessica Jijo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/client/update/medicare/4",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"client",
+						"update",
+						"medicare",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreatePowerOfAttorney",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":1,\n    \"clientId\":1,\n    \"type\":\"small\",\n    \"name\":\"drake\",\n    \"phone\":\"00000\",\n    \"email\":\"aime@lmao.com\",\n    \"address1\":\"amity villa ,NewyorkCity\",\n    \"address2\":\"Newyork,USA\",\n    \"city\":\"NewyorkCity\",\n    \"state\":\"Newyork\",\n    \"postCode\":\"1200\",\n    \"lastUpdatedBy\":\"sam\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/power-of-attorney/create",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"power-of-attorney",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListPowerOfAttorney",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/power-of-attorney/list/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"power-of-attorney",
+						"list",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdatePowerOfAttorney",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"drake\",\r\n    \"type\":\"small\",\r\n    \"phone\":\"00000\",\r\n    \"email\":\"aime@lmao.com\",\r\n    \"address1\":\"amity villa ,NewyorkCity\",\r\n    \"address2\":\"Newyork,USA\",\r\n    \"city\":\"NewyorkCity\",\r\n    \"state\":\"Newyork\",\r\n    \"postCode\":\"1200\",\r\n    \"deleted\":false,\r\n    \"lastUpdatedBy\":\"cony\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/power-of-attorney/update/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"power-of-attorney",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateClientAllowances",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"clientId\":1,\r\n \"cappedKMs\":\"90\",\r\n \"concessionCard\":\"A12\",\r\n \"kms\":\"5\",\r\n \"grocerySpend\":\"1000\",\r\n \"budgetlyCardNo\":\"10\",\r\n \"lastUploadedBy\": \"joy\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/client-allowances/create",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"client-allowances",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateClientTransport",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"odCar\" : \"Yes\",\r\n    \"clientId\" : 1,\r\n    \"carRegistration\" : \"KL 07 AN 0000\",\r\n    \"carRegExpiry\" : \"2021-10-13\",\r\n    \"carModel\" : \"Range Rover Evoque\",\r\n    \"carMakeYear\" : \"2013\",\r\n    \"isTravelProtocol\" : \"Yes\",\r\n    \"travelProtocol\" :\"travelProtocol\",\r\n    \"comprehensiveInsurance\" : \"Yes\",\r\n    \"insurancePolicyNumber\":\"insurancePolicyNumber\",\r\n    \"authorisedPerson\":\"authorisedPerson\",\r\n    \"authorisedPersonContactNumber\" : \"authorisedPersonContactNumber \",\r\n    \"roadSideAssistanceCovered\" : \"Yes\",\r\n    \"insuranceAgency\" : \"insuranceAgency\",\r\n    \"insuranceContactNumber\" : \"insuranceContactNumber\",\r\n    \"cappedKMs\":\"100kms\",\r\n    \"lastUploadedBy\" : \"sam\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/client-transport/create",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"client-transport",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateClientTransport",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"odCar\" : \"No\",\r\n    \"carRegistration\" : \"KL 08 AN 0000\",\r\n    \"deleted\" : \"false\",\r\n    \"carRegExpiry\" : \"2021-10-14\",\r\n    \"carModel\" : \"Range Rover \",\r\n    \"carMakeYear\" : \"2012\",\r\n    \"isTravelProtocol\" : \"No\",\r\n    \"travelProtocol\" :\"travel\",\r\n    \"comprehensiveInsurance\" : \"No\",\r\n    \"insurancePolicyNumber\":\"insurancePolicy\",\r\n    \"authorisedPerson\":\"authorised\",\r\n    \"authorisedPersonContactNumber\" : \"authorisedPersonNumber\",\r\n    \"roadSideAssistanceCovered\" : \"No\",\r\n    \"insuranceAgency\" : \"insurance\",\r\n    \"insuranceContactNumber\" : \"insuranceContact\",\r\n     \"cappedKMs\":\"5000kms\",\r\n    \"lastUploadedBy\" : \"simy\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/client-transport/update/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"client-transport",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListClientTransport",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/client-transport/list/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"client-transport",
+						"list",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

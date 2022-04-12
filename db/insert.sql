@@ -1,0 +1,127 @@
+INSERT INTO public.roles(role_id, name) VALUES (1, 'USER');
+INSERT INTO public.roles(role_id, name) VALUES (2, 'ADMIN');
+INSERT INTO public.roles(role_id, name) VALUES (3, 'HOUSE ADMIN');
+INSERT INTO public.users(email, password, first_name, last_name)
+VALUES ('testadmin@email.com', '$2a$10$WHXPACzfF2H1ZuBs0a1VCu8P3hV7LBoqRCUJ2hsVHNt3OmvU35CGa', 'Test', 'Admin');
+INSERT INTO public.users_roles(user_id, role_id) VALUES ((select user_id from users where email='testadmin@email.com'), 1);
+INSERT INTO public.users_roles(user_id, role_id) VALUES ((select user_id from users where email='testadmin@email.com'), 2);
+
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Incident Result With Injury', 0);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Incident With No Injury', 0);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Hazard', 0);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Motor Vehicle', 0);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Near Miss', 0);
+
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Report only no treatment required', 1);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('First Aid Injury', 1);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Medical Treatment Injury', 1);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Alternate Work Injury', 1);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Loss Time Injury', 1);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Non-work related Injury', 1);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Fatality', 1);
+
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Animal / Insect', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Assault - Physical', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Assault - Verbal', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Body fluid / Products', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Bullying / Harassment', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Chemical Exposure', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Contact with cold object', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Contact with hot object', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Covid - 19', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Crush', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Dangerous Good', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Driving Vehicle', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Electrical / Shock', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Environmental', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Equipment Failure', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Ergonomic', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Exposure to environmental cold', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Exposure to environmental hot', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Fire / Smoke', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Foreign Body', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Impact with object', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Manual Handling - Client / Staff / Visitors', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Manual Handling Object', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Noise', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Psychological', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Sharp Injury', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Slip Trip / Fall', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Work Pressure / Stress', 2);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Other', 2);
+
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Animals', 3);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Confine/Dangerous space', 3);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Night/After Hours', 3);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Odours', 3);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Obstructions/Fences/Gate', 3);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Raining/Storm/Windy', 3);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Sun Glare', 3);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Surface/Paths/Roads/Holes', 3);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Temperature', 3);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Shrubs/Tree/Vegetation', 3);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Working at Height', 3);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Other', 3);
+
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Design Issue', 4);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Equipment Failure / Malfunction', 4);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Fumes / Chemical / Noise', 4);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Insufficient / Inadequate Guards', 4);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Unsuitable use of Plant / Equipment', 4);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Other', 4);
+
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Alcohol/Drugs', 5);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Complacency', 5);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Frustration', 5);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('In the Line of Fire', 5);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Lack of training or instruction', 5);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Loss of balance/traction/grip', 5);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Manual Handling', 5);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Medical Condition', 5);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('No/inappropriate PPE', 5);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Rushing', 5);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Threatening Behaviour', 5);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Tiredness/Fatigue', 5);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Unsafe Practice', 5);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Working Alone', 5);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Other', 5);
+
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Food and Drinks Diary', 6);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Sleep Tracker', 6);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Nightly Checklist', 6);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Bowel Movement Tracker', 6);
+
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Clean and disinfect toilet', 7);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Shower and bathroom cleaned – client / staff', 7);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('General tidy on furniture, floors and benches', 7);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Floors vacuumed', 7);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Floors mopped', 7);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Put washing in the washing machine – Washing cycle', 7);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Placed clothes in the dryer – Drying cycle', 7);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Clothes folded and put away', 7);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Wash, dry and put away pots, dishes, cutlery and crockery', 7);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Clean and tidy staff room / staffing areas', 7);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Charge electronics – phones, iPad etc', 7);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Completion of daily documents – Daily notes, communication book, bowel chart, food diary, behaviour escalation chart etc', 7);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Check medication chart and ensure each entry is completed, including date & signatures (complete incident report if missing)', 7);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Fill out any incident reports and email or message Manager regarding need for further follow up', 7);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Check food in fridge – dispose of all out-of-date items & ensure all items are labelled appropriately', 7);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Empty and replace all inside rubbish bin bags, clean bins', 7);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Rubbish bins taken out / brought in', 7);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Vehicle – vacuum floor and wipe over all surfaces', 7);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Vehicle – ensure all items in vehicle checklist is located and', 7);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Vehicle – Ensure child lock is on / activated', 7);
+
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Funding', 8);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Medical', 8);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Progress', 8);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('New Client', 8);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Training', 8);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Incident', 8);
+
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Funding', 9);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Medical', 9);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Progress', 9);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Training', 9);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Incident', 9);
+INSERT INTO public.lookup(name, lookup_type) VALUES ('Case', 9);
