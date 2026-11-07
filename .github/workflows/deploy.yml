@@ -1,0 +1,133 @@
+name: deploy
+
+# Manual, per-environment deployment using OpenID Connect (no client secret).
+# Needs one-time Azure setup - see "CI/CD" in README.md.
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Target environment
+        type: choice
+        options: [dev, stage, prod]
+        default: dev
+
+# One run per environment at a time; the azurerm backend's blob lease is the second line of defence.
+concurrency:
+  group: deploy-${{ inputs.environment }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+env:
+  TF_VERSION: "1.11.0"
+  TF_DIR: terraform/environments/${{ inputs.environment }}
+  # Terraform's azurerm provider and backend authenticate with the GitHub OIDC token.
+  ARM_USE_OIDC: "true"
+  ARM_USE_AZUREAD: "true"
+  ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+  ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+  ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: maven
+      - run: ./mvnw -B verify
+      - uses: actions/upload-artifact@v4
+        with:
+          name: app-jar
+          path: target/app.jar
+          retention-days: 1
+
+  plan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write # lets the job request an OIDC token from GitHub
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ env.TF_VERSION }}
+      - name: terraform init
+        run: >
+          terraform -chdir="$TF_DIR" init -input=false
+          -backend-config="resource_group_name=${{ vars.TFSTATE_RESOURCE_GROUP }}"
+          -backend-config="storage_account_name=${{ vars.TFSTATE_STORAGE_ACCOUNT }}"
+          -backend-config="container_name=tfstate"
+          -backend-config="key=javademo/${{ inputs.environment }}.tfstate"
+      - name: terraform plan
+        run: terraform -chdir="$TF_DIR" plan -input=false -out=tfplan
+      - name: Plan summary
+        run: terraform -chdir="$TF_DIR" show -no-color tfplan | tail -n 50 >> "$GITHUB_STEP_SUMMARY"
+      # The saved plan is applied as-is after approval, so what was reviewed is what runs.
+      # A plan file can contain sensitive values: keep retention short.
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tfplan-${{ inputs.environment }}
+          path: ${{ env.TF_DIR }}/tfplan
+          retention-days: 1
+
+  apply:
+    needs: [build, plan]
+    runs-on: ubuntu-latest
+    # Required reviewers on this GitHub environment are the manual approval gate.
+    environment: ${{ inputs.environment }}
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ env.TF_VERSION }}
+          terraform_wrapper: false # so 'terraform output -raw' returns clean text
+      - uses: actions/download-artifact@v4
+        with:
+          name: tfplan-${{ inputs.environment }}
+          path: ${{ env.TF_DIR }}
+      - name: terraform init
+        run: >
+          terraform -chdir="$TF_DIR" init -input=false
+          -backend-config="resource_group_name=${{ vars.TFSTATE_RESOURCE_GROUP }}"
+          -backend-config="storage_account_name=${{ vars.TFSTATE_STORAGE_ACCOUNT }}"
+          -backend-config="container_name=tfstate"
+          -backend-config="key=javademo/${{ inputs.environment }}.tfstate"
+      - name: terraform apply
+        run: terraform -chdir="$TF_DIR" apply -input=false tfplan
+      - name: Read outputs
+        id: tf
+        run: |
+          echo "web_app_name=$(terraform -chdir="$TF_DIR" output -raw web_app_name)" >> "$GITHUB_OUTPUT"
+          echo "web_app_url=$(terraform -chdir="$TF_DIR" output -raw web_app_url)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: app-jar
+          path: dist
+      - name: Azure login (OIDC)
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      - name: Deploy jar
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: ${{ steps.tf.outputs.web_app_name }}
+          package: dist/app.jar
+      - name: Smoke test
+        run: |
+          for _ in $(seq 1 30); do
+            if curl -fsS "${{ steps.tf.outputs.web_app_url }}/actuator/health"; then exit 0; fi
+            sleep 10
+          done
+          echo "Health check did not pass within 5 minutes" >&2
+          exit 1
