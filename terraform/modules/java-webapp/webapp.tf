@@ -44,6 +44,9 @@ resource "azurerm_linux_web_app" "this" {
   }
 
   app_settings = {
+    # Java SE on App Service sends traffic to port 80; Spring Boot reads SERVER_PORT.
+    SERVER_PORT = "80"
+
     DB_HOST    = azurerm_postgresql_flexible_server.this.fqdn
     DB_NAME    = azurerm_postgresql_flexible_server_database.app.name
     DB_USER    = azurerm_postgresql_flexible_server.this.administrator_login
