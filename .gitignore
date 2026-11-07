@@ -29,3 +29,4 @@ target/
 # Local secrets
 .env
 .env.*
+terraform/modules/**/.terraform.lock.hcl
