@@ -1,28 +1,84 @@
-name: Provision Resources
-
+# Azure DevOps equivalent of .github/workflows/deploy.yml (Terraform part).
+# Requires: the Microsoft DevLabs Terraform extension, an Azure Resource Manager
+# service connection using workload identity federation, and pipeline variables
+# serviceConnection, tfstateResourceGroup, tfstateStorageAccount.
 trigger: none
 
-pool:
-  vmImage: 'ubuntu-latest'
+parameters:
+  - name: environment
+    type: string
+    default: dev
+    values: [dev, stage, prod]
 
-steps:
+variables:
+  tfDir: $(Build.SourcesDirectory)/terraform/environments/${{ parameters.environment }}
 
-- task: TerraformTaskV1@0
-  inputs:
-    provider: 'azurerm'
-    command: 'init'
-    workingDirectory: $(Build.Repository.LocalPath)/terraform
-    backendServiceArm: $(serviceConnection)
-    backendAzureRmResourceGroupName: $(serviceConnection)
-    backendAzureRmStorageAccountName: $(serviceConnection)
-    backendAzureRmContainerName: 'tfstate'
-    backendAzureRmKey: 'tf/terraform.tfstate'
+stages:
+  - stage: Plan
+    jobs:
+      - job: Plan
+        pool:
+          vmImage: ubuntu-latest
+        steps:
+          - task: TerraformInstaller@1
+            inputs:
+              terraformVersion: 1.11.0
+          - task: TerraformTaskV4@4
+            displayName: terraform init
+            inputs:
+              provider: azurerm
+              command: init
+              workingDirectory: $(tfDir)
+              backendServiceArm: $(serviceConnection)
+              backendAzureRmResourceGroupName: $(tfstateResourceGroup)
+              backendAzureRmStorageAccountName: $(tfstateStorageAccount)
+              backendAzureRmContainerName: tfstate
+              backendAzureRmKey: javademo/${{ parameters.environment }}.tfstate
+          - task: TerraformTaskV4@4
+            displayName: terraform plan
+            inputs:
+              provider: azurerm
+              command: plan
+              workingDirectory: $(tfDir)
+              environmentServiceNameAzureRM: $(serviceConnection)
+              commandOptions: -input=false -out=tfplan
+          - publish: $(tfDir)/tfplan
+            artifact: tfplan
 
-- task: TerraformTaskV1@0
-  inputs:
-    provider: 'azurerm'
-    command: 'apply'
-    workingDirectory: $(Build.Repository.LocalPath)/terraform
-    backendAzureRmContainerName: 'tfstate'
-    backendAzureRmKey: 'tf/terraform.tfstate'
-    environmentServiceNameAzureRM: $(serviceConnection)
+  - stage: Apply
+    dependsOn: Plan
+    jobs:
+      - deployment: Apply
+        # Manual approval lives on the Azure DevOps environment.
+        environment: ${{ parameters.environment }}
+        pool:
+          vmImage: ubuntu-latest
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - checkout: self
+                - task: TerraformInstaller@1
+                  inputs:
+                    terraformVersion: 1.11.0
+                - task: TerraformTaskV4@4
+                  displayName: terraform init
+                  inputs:
+                    provider: azurerm
+                    command: init
+                    workingDirectory: $(tfDir)
+                    backendServiceArm: $(serviceConnection)
+                    backendAzureRmResourceGroupName: $(tfstateResourceGroup)
+                    backendAzureRmStorageAccountName: $(tfstateStorageAccount)
+                    backendAzureRmContainerName: tfstate
+                    backendAzureRmKey: javademo/${{ parameters.environment }}.tfstate
+                - download: current
+                  artifact: tfplan
+                - task: TerraformTaskV4@4
+                  displayName: terraform apply
+                  inputs:
+                    provider: azurerm
+                    command: apply
+                    workingDirectory: $(tfDir)
+                    environmentServiceNameAzureRM: $(serviceConnection)
+                    commandOptions: -input=false $(Pipeline.Workspace)/tfplan/tfplan
